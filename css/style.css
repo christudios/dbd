@@ -139,12 +139,14 @@ main{
     0 0 20px rgba(255, 0, 0, 0.2),   /* resplandor rojo más fuerte */
     0 10px 30px rgba(255, 0, 0, 0.1); /* profundidad como sombra larga */
     transition: box-shadow 0.3s ease;
+    transition: .5s;
 }
 .hero:hover {
-  box-shadow:
-    0 0 15px rgba(255, 0, 0, 0.6),
-    0 0 30px rgba(255, 0, 0, 0.4),
-    0 15px 40px rgba(255, 0, 0, 0.2);
+    transform: scale(.9);
+    box-shadow:
+        0 0 15px rgba(255, 0, 0, 0.6),
+        0 0 30px rgba(255, 0, 0, 0.4),
+        0 15px 40px rgba(255, 0, 0, 0.2);
 }
 
 main .hero:nth-child(2){
