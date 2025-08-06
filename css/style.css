@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap');
+
+
+/*
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+*/
+
+/*
+  font-family: "Noto Sans Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    
+}
+body{
+    background-color: antiquewhite;
+}
+.header{
+    height: 80px;
+     background: linear-gradient(to bottom, 
+    #000000 0%,       /* negro arriba */
+    #1a0000 25%,       /* negro con un leve rojo */
+    #4d0000 50%,       /* rojo sangre oscuro */
+    #1a0000 75%,       /* vuelve al oscuro */
+    #000000 100%       /* negro abajo */
+  );
+}
+.header .navbar{
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+    margin: 0 auto;
+    width: min(1200px, 100%);
+
+
+}
+.icons{
+    color: white;
+    cursor: pointer;
+}
+.check_menu:checked + .ul_link{
+    height: calc(100vh - 80px);
+}
+.logo{
+    background: url(../img/logo.png);
+    width: 50px;
+    height: 50px;
+    background-position: center;
+    background-size: cover;
+}
+
+#check_menu{
+    display: none;
+}
+.ul_link{
+    position: absolute;
+    top: 80px;
+    height: calc(100vh - 80px);
+    width: 100%;
+      background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 6rem;
+    height: 0;
+    overflow: hidden;
+    left: 0;
+    transition: .3s;
+    list-style: none;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: .7s;
+
+}
+.link:hover{
+    font-size: 1.5rem;
+    transition: .3s;
+    padding: 4px;
+    border-radius: 15px;
+    background-color: rgb(255, 0, 0);
+    color: black;
+
+}
+/*main*/
+main{
+  background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
+
+    height: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+
+}
+#hero_foto{
+    display: none;
+}
+.hero{
+    min-width: 300px;
+    height: 400px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url(../img/1b4a39c3d24c343f0247362538e3f755.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 15px;
+    margin: 6rem 1rem;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow:
+    0 0 10px rgba(128, 0, 0, 0.4),   /* brillo suave rojo oscuro */
+    0 0 20px rgba(255, 0, 0, 0.2),   /* resplandor rojo más fuerte */
+    0 10px 30px rgba(255, 0, 0, 0.1); /* profundidad como sombra larga */
+    transition: box-shadow 0.3s ease;
+}
+.hero:hover {
+  box-shadow:
+    0 0 15px rgba(255, 0, 0, 0.6),
+    0 0 30px rgba(255, 0, 0, 0.4),
+    0 15px 40px rgba(255, 0, 0, 0.2);
+}
+
+main .hero:nth-child(2){
+    background-image: url(../img/dead-by-daylight-video-games-video-game-art-horror-hd-wallpaper-preview.jpg);
+}
+.hero h2{
+    color: rgb(255, 0, 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    width: fit-content;
+    margin: 0 auto;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+    padding: 1rem;
+    border-radius: 15px;
+}
+.img{
+    display: none;
+}
+.content{
+    font-family: "Noto Sans Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-style: normal;
+    font-variation-settings:
+    "wdth" 100;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content p{
+    font-size: 1rem;
+    background-color: rgba(0,0,0,.6);
+    border-radius:15px;
+    padding: 1rem;
+
+}
+footer{
+  background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
+}
+
+@media (min-width:450px){
+    .labe_menu{
+        display: none;
+    }
+    .ul_link{
+        position: static;
+        width: auto;
+        flex-direction: row;
+        height: auto;
+        gap: 1rem;
+    }
+    .link:hover{
+        font-size: 1.5rem;
+        transition: .3s;
+        padding: 4px;
+        border-radius: 15px;
+        background-color: rgb(255, 0, 0);
+        color: black;
+    }
+}
+@media (min-width:900px){
+    main .hero:nth-child(2){
+        background-image: none;
+    }
+    .hero{
+        background-image: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    #hero_foto{
+        display: flex;
+        padding:  .5rem;
+        height: 100%;
+        max-width: 600px;
+        border-radius: 15px;
+        min-width: 550px;
+    }
+    .content{
+        min-width: 300px;
+    }
+    .content{
+        font-size: 1.5rem;
+    }
+}
