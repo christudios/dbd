@@ -24,7 +24,12 @@
     
 }
 body{
-    background-color: antiquewhite;
+    background: radial-gradient(circle at center, 
+    #4d0000 0%,        /* rojo sangre centro */
+    #1a0000 40%,        /* rojo oscuro */
+    #000000 100%        /* negro hacia los bordes */
+  );
+
 }
 .header{
     height: 80px;
@@ -106,16 +111,12 @@ body{
 }
 /*main*/
 main{
-  background: radial-gradient(circle at center, 
-    #4d0000 0%,        /* rojo sangre centro */
-    #1a0000 40%,        /* rojo oscuro */
-    #000000 100%        /* negro hacia los bordes */
-  );
-
     height: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+
 
 }
 #hero_foto{
